@@ -1,0 +1,61 @@
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+  crossorigin="anonymous"
+/>
+<section class="col-md-4, formulario">
+  <header>
+    <h1>¿Ya eres Usuario?</h1>
+    <form #formulario="ngForm" (ngSubmit)="onsubmit(formulario)" novalidate>
+      <fieldset>
+        <legend>Inicia sesion</legend>
+        <p>
+          <label for="user" class="form-label"> Usuario </label>
+          <input
+            name="user"
+            type="text"
+            placeholder="usuario"
+            required
+            ngModel
+            #user="ngModel"
+            class="form-control, inputs"
+            id="validationCustom01"
+          />
+        </p>
+        <p>
+          <label for="password" class="form-label"> Password </label>
+          <input
+            name="password"
+            type="password"
+            required
+            ngModel
+            #user="ngModel"
+            class="form-control, inputs"
+            id="validationCustom02"
+            placeholder="contraseña"
+          />
+        </p>
+        <p>
+          <label for="url" class="form-label"> Url </label>
+          <input
+            formControlName="url"
+            class="form-control, inputs"
+            id="validationCustom02"
+            placeholder="¿De que pagina nos conoces?"
+          />
+        </p>
+
+        <p>
+          <button
+            class="btn btn-warning, boton"
+            type="submit"
+            [disabled]="!formulario.valid"
+          >
+            Submit
+          </button>
+        </p>
+      </fieldset>
+    </form>
+  </header>
+</section>

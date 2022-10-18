@@ -1,0 +1,43 @@
+.formulario {
+  background-color: #ffd1667a;
+  width: 35%;
+  padding: 5%;
+  margin: 20px;
+  border-radius: 30%;
+  border: 1px solid #ff003c;
+}
+h1 {
+  width: 100%;
+  font-size: 35px;
+}
+.inputs {
+  background-color: #6afad4a1;
+  width: 100%;
+  margin: 5px;
+  color: #073b4c;
+  letter-spacing: 2px;
+}
+.inputs:focus {
+  background-color: #6cdaff8f;
+  width: 100%;
+  margin: 5px;
+  letter-spacing: 2px;
+}
+.boton {
+  background-color: #ffca3a;
+  font-weight: 800;
+  border: 1px groove #ff003c;
+  transition: 1s all;
+  letter-spacing: 2px;
+}
+.boton:hover {
+  background-color: #ff003c;
+  font-weight: 800;
+  border: 4px double #ffca3a;
+  transition: 2s all;
+  letter-spacing: 3px;
+}
+
+.boton:disabled {
+  background-color: rgb(207, 207, 0);
+}

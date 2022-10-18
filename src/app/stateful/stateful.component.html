@@ -1,0 +1,39 @@
+<main>
+  <div class="inicio">
+    <h1>Nuestros cursos</h1>
+    <!-- <ul>
+      <li class="cursos" *ngFor="let curso of ShopModel.shopItems">
+        {{ curso.title }}
+      </li>
+    </ul> -->
+  </div>
+  <div class="contenido">
+    <div class="caja" *ngFor="let curso of ShopModel.shopItems">
+      <app-stateless
+        [product]="curso"
+        (cursoMatriculado)="cursoMatriculado($event)"
+      ></app-stateless>
+    </div>
+  </div>
+  <div id="matriculacion">
+    <ul>
+      <h2 class="prescripcion">Información de la Matricula</h2>
+      <li class="comprado" *ngFor="let boughtItem of boughtItems">
+        {{ boughtItem.title }}
+      </li>
+      <!-- <span>{{ boughtItems.price | currency: "&euro;" }}</span>
+      <h2>Total: {{ finalPrice() | currency: "&euro;" }}</h2> -->
+    </ul>
+  </div>
+  <app-confirm></app-confirm>
+  <app-status-cart></app-status-cart>
+  <app-formulario-reactivo></app-formulario-reactivo>
+  <!-- <input
+    type="text"
+    (keydown)="onKeyboard($event)"
+    placeholder="Escribe cualquier tecla"
+  /> -->
+  <footer class="piedepagina">
+    Todos los derechos reservados silkaleex &copy;
+  </footer>
+</main>
