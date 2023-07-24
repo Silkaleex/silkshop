@@ -1,0 +1,80 @@
+.contenido {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 5px 0px;
+}
+.imagen {
+  width: 100%;
+  height: 200px;
+  border: 1px groove #ffd166c9;
+}
+.contenedor {
+  padding: 20% 25px;
+  height: 90%;
+  border: 3px groove #ff003c;
+}
+.titulo {
+  text-align: left;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 3;
+  grid-row-end: 3;
+  font-size: 20px;
+  margin: 2% 0%;
+  width: 300%;
+  height: auto;
+}
+
+.texto {
+  grid-column-start: 1;
+  width: 122.3%;
+  font-size: 15px;
+  margin: 5% 0%;
+}
+.precio {
+  text-align: left;
+  grid-column-start: 1;
+  margin: 0% 0% 15% 0%;
+}
+.boton {
+  font-weight: 700;
+  padding: 5% 15%;
+  grid-column-start: 1;
+  font-size: 20px;
+  margin: 20% 0px 25% 0px;
+  border: 3px groove #ff003c;
+  background-color: #faa507b0;
+  color: #073b4c;
+  text-decoration: none;
+  text-align: center;
+  transition: 2s all;
+  width: 200px;
+}
+.boton:hover {
+  font-weight: 700;
+  padding: 5% 15%;
+  grid-column-start: 1;
+  font-size: 20px;
+  margin: 20% 0px 25% 0px;
+  background-color: #ffd166;
+  border: 3px groove #faa507b0;
+  color: #ff003cc7;
+  text-decoration: none;
+  text-align: center;
+  transition: 2s all;
+  width: 200px;
+}
+.boton:disabled {
+  font-weight: 700;
+  padding: 5% 15%;
+  margin: 20% 0px 25% 0px;
+  border-radius: 40px;
+  border: 3px groove #118ab2;
+  font-size: 20px;
+  color: #ffd166;
+  background-color: #ef476f;
+  text-decoration: none;
+  text-align: center;
+  transition: 2s all;
+  width: 200px;
+}

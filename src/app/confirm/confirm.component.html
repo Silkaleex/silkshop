@@ -1,0 +1,57 @@
+<!-- Button trigger modal -->
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+  crossorigin="anonymous"
+/>
+<!-- Button trigger modal -->
+<button
+  *ngIf="!isDisabled"
+  (click)="showModal = true"
+  class="confirmacion-btn"
+  type="button"
+  data-bs-toggle="modal"
+  data-bs-target="#exampleModal"
+>
+  Confirmar compra
+</button>
+
+<!-- Modal -->
+<div
+  class="modal fade show"
+  [ngClass]="{ show: showModal }"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">
+          Pago de Matricula
+        </h1>
+        <button
+          (click)="showModal = false"
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">¿Estas seguro de hacer esta compra?</div>
+      <div class="modal-footer">
+        <button
+          (click)="showModal = false"
+          type="button"
+          class="denegar"
+          data-bs-dismiss="modal"
+        >
+          Rechazar
+        </button>
+        <button type="button" class="confirmar">Aceptar</button>
+      </div>
+    </div>
+  </div>
+</div>

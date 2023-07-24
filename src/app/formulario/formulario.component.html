@@ -1,0 +1,35 @@
+<section>
+  <header>
+    <h1>Form Elements</h1>
+    <form #formulario="ngForm" (ngSubmit)="onsubmit(formulario)" novalidate>
+      <fieldset>
+        <legend>Input fields</legend>
+        <p>
+          <label for="user"> Usuario </label>
+          <input
+            name="user"
+            type="text"
+            placeholder="su nombre de usuario"
+            required
+            ngModel
+            #user="ngModel"
+          />
+        </p>
+        <p>
+          <label for="password"> Password </label>
+          <input
+            name="password"
+            type="password"
+            required
+            ngModel
+            #user="ngModel"
+          />
+        </p>
+        <p>
+          <button type="submit" [disabled]="!formulario.valid">Submit</button>
+        </p>
+      </fieldset>
+    </form>
+  </header>
+</section>
+{{ formulario.valid | json }}

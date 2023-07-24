@@ -1,0 +1,19 @@
+<div class="contenedor">
+  <img
+    (contextmenu)="mensaje()"
+    src="{{ product.picture }}"
+    class="imagen"
+    alt="{{ product.title }}"
+  />
+  <div class="contenido">
+    <h5 class="titulo">{{ product.title }}</h5>
+    <p class="texto">
+      {{ product.desc }}
+    </p>
+    <p class="precio">{{ product.price }}€</p>
+    <!-- <a href="#" (click)="clickItem(curso)" class="boton">Comprar:</a> -->
+    <button class="boton" [disabled]="isDisable()" (click)="matriculars()">
+      {{ matricula }}
+    </button>
+  </div>
+</div>
