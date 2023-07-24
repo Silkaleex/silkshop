@@ -15,4 +15,5 @@
 ## Crear un usuario, profesor y un administrador
 ## Crear una base de datos para guardar los datos de un usuario y cual fue el curso que compro
 ## Actualizacion de precios.
+## Hacer una sección para registrarse el usuario
 
